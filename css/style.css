@@ -30,9 +30,9 @@ body {
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 .logo {
@@ -43,6 +43,8 @@ body {
 
 nav {
     width: 100%;
+    margin-right: 40px;
+    text-align: right;
     
 }
 
@@ -56,8 +58,10 @@ li {
 
 .nav-link {
     cursor: pointer;
+    display: flex;
+    justify-content: right;
     text-decoration: none;
-    font-size: 20px;
+    font-size: px;
     color: #0a0a05;
     transition: 0.5s;
 }
@@ -162,6 +166,7 @@ button a{
     margin-left: 300px;
     width: 60%;
     z-index: 2;
+    animation: moveController 1s infinite alternate ease-in-out; 
 }
 
 .color-box{
@@ -178,19 +183,15 @@ button a{
     background: linear-gradient(356deg, rgba(0,53,101,1) 0%, rgba(9,85,195,1) 52%, rgba(56,164,255,1) 100%);
 }
 
-/* .social-links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@keyframes moveController{
+    from{
+        transform: translate(-5%, -5%) rotate(-5deg);
+    }
 }
 
-.social-links img{
-    height: 30px;
-    margin: 20px;
-    cursor: pointer;
-} */
-
 .menu-icon{
+
  width: 30px; 
  margin-right: 40px;
  display: none;
@@ -199,14 +200,53 @@ button a{
 
 /* responsividade */
 
+/* @media (max-width: 768px){
+    .row{
+        flex-direction: column-reverse;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 760px){
 
-    #menu-list{
+    .row{
+        flex-direction: column-reverse;
+    }
+
+    .controller{
+        margin-left: 30px;
+        width: 90%;
+    }
+
+    .column-1{
+        font-size: 20px;
+    }
+    .color-box{
         display: none;
+    }
+
+    h2{
+        margin-right: 150px;
+        font-size: 80px;
+    }
+    
+
+    #menu-list{
+        position: relative;
+        top: 30px;
+        left: 60px;
+        overflow: hidden;
+
     }
 
     .menu-icon{
         display: block;
     }
 
-}
+    .nav-li{
+        display: block;
+
+    }
+} */
